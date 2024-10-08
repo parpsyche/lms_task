@@ -70,7 +70,6 @@ class ReturnBookAPIView(APIView):
 @api_view(['POST'])
 def signup(request):
     form = UserCreationForm(request.data)
-    breakpoint()
     if form.is_valid():
         user = form.save()
         login(request, user)
